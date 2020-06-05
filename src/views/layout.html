@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {# Se ele não achar um bloco title, irá usar esse padrão abaixo #}
+    {% block title %}
+        <title>Ecoleta</title>
+    {% endblock title %}
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/styles/main.css">
+
+    
+    {% block styles %}
+
+        {# exportando o item "styles" do index.html #}
+
+    {% endblock styles %}
+
+    <link rel="stylesheet" href="/styles/responsive.css">
+</head>
+<body>
+
+
+    {# usando a variável #}
+    <div id="{{ pageId }}">
+        
+        {% block content %}
+            {# exportando o item "content" do index.html #}
+        {% endblock content %}
+
+    </div>
+
+    {% block modal %}
+    {% endblock modal %}
+
+    {% block script %}
+    {% endblock script %}
+</body>
+</html>
