@@ -69,7 +69,7 @@ let selectedItems = []
 function handleSelectedItem(event) {
     const itemLi = event.target
 
-    console.log(itemLi)
+    // console.log("ITEM ID:", itemLi)
 
     itemLi.classList.toggle('selected')
 
@@ -95,6 +95,8 @@ function handleSelectedItem(event) {
         selectedItems.push(itemId)
     }
 
+
+    // console.log("selectedItems:", selectedItems)
     // Atualizar o campo escondido com os itens selecionados
     collectedItems.value = selectedItems
 }
